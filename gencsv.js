@@ -1,4 +1,6 @@
 import fs from "fs";
+import { FILE_NAME } from "./constants.js";
+import { percentual } from "./utils.js";
 
 const lineCount = 1e6; // the amount of rows the file will have
 
@@ -6,10 +8,10 @@ const lineCount = 1e6; // the amount of rows the file will have
   console.log("Generating file...");
   console.time("Elapsed time");
 
-  const writer = fs.createWriteStream("output.csv");
+  const writer = fs.createWriteStream(FILE_NAME);
 
   for (let id = 0; id < lineCount; id++) {
-    process.stdout.write(`\rLine ${id + 1}/${lineCount}`);
+    process.stdout.write(`\r${percentual(id + 1, lineCount).toFixed(1)}%`);
     const canWrite = writer.write(`${id},1\n`);
 
     if (!canWrite) {

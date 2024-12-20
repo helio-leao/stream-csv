@@ -1,4 +1,5 @@
 import fs from "fs";
+import { FILE_NAME } from "./constants.js";
 
 const highWaterMark = 16 * 1024; // 16 KB chunks (default 64KB)
 
@@ -8,7 +9,7 @@ let total = 0;
 console.log("Calculating...");
 console.time("Elapsed time");
 
-const reader = fs.createReadStream("output.csv", { highWaterMark });
+const reader = fs.createReadStream(FILE_NAME, { highWaterMark });
 
 reader
   .on("data", (chunk) => {
@@ -20,7 +21,7 @@ reader
     for (let i = 0; i < lines.length - 1; i++) {
       const line = lines[i];
       const [, n] = line.split(",");
-      total += parseInt(n);
+      total += parseInt(n) || 0;
     }
 
     // The last line might be incomplete, so save it as the fragment for the next batch
