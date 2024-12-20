@@ -1,5 +1,5 @@
 {
-  "name": "csv",
+  "name": "stream-csv",
   "version": "1.0.0",
   "type": "module",
   "main": "gencsv.js",
