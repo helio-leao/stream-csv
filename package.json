@@ -1,0 +1,14 @@
+{
+  "name": "csv",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "gencsv.js",
+  "scripts": {
+    "write": "node gencsv.js",
+    "read": "node readcsv.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
