@@ -9,7 +9,8 @@ console.log("Calculating...");
 console.time("Elapsed time");
 
 for await (const row of readCsvRows(filePath)) {
-  total += parseInt(row[1], 10) || 0;
+  const value = row[1];
+  total += parseInt(value || 0);
 }
 
 console.log("Total:", total);
