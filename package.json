@@ -2,10 +2,10 @@
   "name": "stream-csv",
   "version": "1.0.0",
   "type": "module",
-  "main": "gencsv.js",
+  "main": "src/index.js",
   "scripts": {
-    "write": "node write.js",
-    "read": "node read.js"
+    "start": "node src/index.js",
+    "write": "node src/write.js"
   },
   "keywords": [],
   "author": "",

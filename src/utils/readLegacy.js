@@ -1,5 +1,5 @@
 import fs from "fs";
-import { FILE_NAME } from "./constants.js";
+import { FILE_NAME } from "../constants/filePaths.js";
 
 let total = 0; // accumulator for 2nd column values
 
