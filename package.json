@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "read": "node src/index.js",
-    "write": "node src/csvWriter.js"
+    "write": "node src/csvGenerator.js"
   },
   "keywords": [],
   "author": "",
