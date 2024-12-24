@@ -1,12 +1,12 @@
 # Node Streams Project
 
-This project demonstrates the use of Node.js streams for efficiently reading and writing large amounts of data to a file. It consists of two scripts: one for generating a file with a specified number of rows (`write.js`) and another for reading and processing the file (`read.js`).
+This project demonstrates the use of Node.js streams and readline for efficiently reading and writing large amounts of data to a file. It consists of two scripts: one for generating a file with a specified number of rows (`write.js`) and another for reading and processing the file (`read.js`).
 
 ## Features
 
 - **Write Script**: Generates a large file with rows in the format `id,value`.
-- **Read Script**: Reads the file in chunks, processes each line, and calculates the sum of all values.
-- Efficient handling of large files using Node.js streams.
+- **Read Script**: Reads the file line by line, and calculates the sum of all values.
+- Efficient handling of large files using Node.js streams and readline.
 
 ## Prerequisites
 
@@ -56,10 +56,9 @@ You will see the total sum and the elapsed time for processing.
 
 ### Read Script (`read.js`)
 
-1. A `ReadStream` is created to read `data.txt` in chunks of 16 KB.
-2. Each chunk is processed to extract complete lines and calculate the sum of the values in the second column.
-3. Incomplete lines are stored in a fragment and processed with the next chunk.
-4. The total sum and elapsed time are logged at the end.
+1. A `ReadStream` is created to read `data.txt`.
+2. The file is read line by line using the `readline` object.
+3. The total sum and elapsed time are logged at the end.
 
 ## Notes
 
