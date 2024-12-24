@@ -1,8 +1,8 @@
-import { FILE_NAME, OUTPUT_DIRECTORY_NAME } from "./constants/filePaths.js";
+import { CSV_FILE_NAME, OUTPUT_DIRECTORY_NAME } from "./constants/filePaths.js";
 import readCsvRows from "./utils/readCsvRows.js";
 import path from "path";
 
-const filePath = path.join(OUTPUT_DIRECTORY_NAME, FILE_NAME);
+const filePath = path.join(OUTPUT_DIRECTORY_NAME, CSV_FILE_NAME);
 
 let total = 0; // accumulator for 2nd column values
 console.log("Calculating...");
