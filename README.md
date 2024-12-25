@@ -32,7 +32,7 @@ To run the write script, use:
 npm run write
 ```
 
-This will create a file named `output.csv` in the project directory.
+This will create a file named `file.csv` in the project directory.
 
 ### Read Script
 
@@ -50,7 +50,7 @@ You will see the total sum and the elapsed time for processing.
 
 ### Write Script (`write.js`)
 
-1. A `WriteStream` is created to write data to `output.csv`.
+1. A `WriteStream` is created to write data to `file.csv`.
 2. It generates rows in the format `id,1` and writes them to the file in batches.
 3. Backpressure is handled using the `drain` event.
 
